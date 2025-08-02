@@ -52,7 +52,7 @@ This project is an end-to-end audio classification and diagnostics system built 
 - 👁️ Visualization of internal CNN feature maps for interpretability  
 - 📊 Confidence-aware real-time predictions  
 - 🌊 Waveform and spectrogram visualizations for input transparency  
-- 📋 Interactive Tableau dashboard for performance diagnostics (confusion matrix, calibration, drift, failure modes)  
+- 📋 Interactive Tableau dashboard for 11 specific wav files
 - 🔍 Systematic analysis of distribution shift between training and real inference data  
 
 ---
