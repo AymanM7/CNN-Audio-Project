@@ -1,24 +1,94 @@
-## Overview
+# Deep Audio Classification & Diagnostics on EXC50
 
-This project is an end-to-end audio classification prototype built from scratch. It trains a ResNet-style convolutional neural network on environmental sound data (EXC50/ESC-50)  dataset using mel spectrogram inputs and advanced augmentation techniques to recognize sounds like bird chirps. rain sound. The training pipeline incorporates Data Mixing and time/frequency masking, and is optimized with AdamW, OneCycleLR, and batch normalization, with full experiment tracking via TensorBoard. Inference is exposed via a FastAPI endpoint with Pydantic validation and executed on demand using serverless GPU infrastructure (Modal) backed by NVIDIA A10-class hardware. The system includes interpretability tooling—visualizing internal CNN feature maps, confidence scores, waveforms, and spectrograms—and a clean Tableau dashboard for diagnosing per-class performance, calibration, distribution shift, and failure modes. Real-world inference gaps are analyzed and framed as actionable insights.
+## Project
 
-##  Project Features
+This project is an end-to-end audio classification and diagnostics system built from the ground up. It ingests environmental sound recordings, preprocesses and augments them, trains a ResNet-style convolutional neural network on mel spectrogram representations, and exposes real-time inference via a robust API. The entire inference pipeline is deployed serverlessly using Modal’s cloud infrastructure, leveraging **NVIDIA A10G** GPUs for scalable, on-demand audio classification. Comprehensive observability (via TensorBoard) and interpretability tooling are integrated, and an interactive Tableau dashboard surfaces performance, confidence, distribution shift, and failure modes—turning model behavior (including real-world degradation) into actionable insight.
 
-## Overview
+### Project Architecture
 
-This project is an end-to-end audio classification and diagnostics prototype. It trains a ResNet-style convolutional neural network on environmental sound data (EXC50/ESC-50) using mel spectrogram inputs and advanced augmentation (Mixup, time/frequency masking) to recognize real-world sounds. Training is optimized with AdamW, OneCycleLR learning rate scheduling, and batch normalization, with full observability via TensorBoard (tracking learning rate progression, training/validation accuracy, loss curves, and convergence behavior). Inference is exposed through a FastAPI endpoint with Pydantic validation and executed on-demand using serverless cloud GPU infrastructure—Modal powering **NVIDIA A10G-class** GPUs for scalable, cost-efficient real-time classification. The system includes interpretability tooling (internal CNN feature map visualization, confidence scoring, waveform/spectrogram transparency) and an interactive Tableau dashboard to surface per-class performance, calibration, distribution shift, and failure modes. Real-world inference gaps are diagnosed and presented as actionable insights.
+1. **Data Ingestion & Preprocessing**  
+   Raw audio clips (EXC50/ESC-50 style environmental sounds) are loaded, normalized, and converted into mel spectrograms—effectively turning audio into image-like representations suitable for deep CNNs. Waveform and spectrogram visualizations are generated for transparency.
+
+2. **Data Augmentation**  
+   To improve generalization, advanced augmentations are applied: Mixup and SpecAugment-style time/frequency masking. These introduce robustness to variations and mimic real-world noise/distortions.
+
+3. **Model & Training**  
+   A ResNet-style CNN with residual blocks is trained on the augmented spectrograms. Training is optimized using:
+   - **AdamW optimizer** for decoupled weight decay  
+   - **OneCycleLR learning rate scheduler** for efficient convergence  
+   - **Batch Normalization** for stable and faster training  
+   Full training dynamics—including learning rate progression, training/validation accuracy, and loss curves—are tracked via **TensorBoard** for experiment transparency and debugging.
+
+4. **Inference Pipeline**  
+   The trained model is exposed via a **FastAPI** endpoint. Requests are schema-validated using **Pydantic** to ensure robustness. Real-time audio inputs are processed, classified, and returned with confidence scores.
+
+5. **Cloud Deployment & Scalability**  
+   Inference is deployed **serverlessly** using **Modal**, tapping into Modal’s orchestration to run GPU-backed workloads on **NVIDIA A10G** hardware. This design delivers scalable, low-latency classification without persistent infrastructure cost—spinning up GPU resources on demand.
+
+6. **Interpretability & Diagnostics**  
+   - Internal CNN feature maps are visualized to give insight into what the network is learning.  
+   - Confidence-aware predictions highlight uncertainty.  
+   - Distribution shift between training data and real-world inference inputs is analyzed to explain degraded performance and surface unreliability.
+
+7. **Performance Visualization**  
+   An **interactive Tableau dashboard** consolidates all diagnostics:
+   - Per-class metrics (precision, recall, F1), confusion matrix  
+   - Confidence calibration and reliability analysis  
+   - Failure mode exploration (high-confidence errors, common confusions)  
+   - Drift visualization comparing training vs inference feature distributions  
+   - Sample-level inspector showing waveform/spectrogram, true vs predicted label, confidence, and feature map thumbnails  
+
+---
 
 ## Features
 
-- 🧠 ResNet-style deep CNN with residual blocks for audio classification  
-- 🎼 Mel Spectrogram audio-to-image conversion  
-- 🎛️ Robust data augmentation: Mixup and time/frequency masking (SpecAugment-style)  
+- 🧠 ResNet-style deep CNN with residual blocks for robust audio feature extraction  
+- 🎼 Mel spectrogram audio-to-image conversion  
+- 🎛️ Advanced augmentation: Mixup and time/frequency masking (SpecAugment-style)  
 - ⚙️ Optimized training pipeline: AdamW optimizer, OneCycleLR scheduler, and Batch Normalization  
-- 📈 TensorBoard integration capturing learning rate schedule, training/validation accuracy, loss curves, and convergence behavior  
-- 🚀 FastAPI inference endpoint with schema-validated requests via Pydantic  
-- ⚡ Serverless GPU inference on Modal using **NVIDIA A10G** hardware for scalable, on-demand prediction  
-- 👁️ Internal CNN feature map visualization for model interpretability  
-- 📊 Confidence-aware real-time classification outputs  
-- 🌊 Waveform and spectrogram visualization for input transparency  
-- 📋 Interactive Tableau dashboard for diagnosing performance (confusion matrix, calibration, drift, and failure modes)  
-- 🔍 Analysis of distribution shift between training and inference to surface and explain degraded real-world behavior  
+- 📈 TensorBoard logging capturing learning rate schedule, accuracy curves, loss convergence, and training dynamics  
+- 🚀 FastAPI inference endpoint with strict request validation using Pydantic  
+- ⚡ Serverless GPU inference powered by Modal on **NVIDIA A10G** hardware for scalable, on-demand classification  
+- 👁️ Visualization of internal CNN feature maps for interpretability  
+- 📊 Confidence-aware real-time predictions  
+- 🌊 Waveform and spectrogram visualizations for input transparency  
+- 📋 Interactive Tableau dashboard for performance diagnostics (confusion matrix, calibration, drift, failure modes)  
+- 🔍 Systematic analysis of distribution shift between training and real inference data  
+
+---
+
+## Skills Demonstrated
+
+- Deep learning architecture design (ResNet-style CNN)  
+- Audio preprocessing and representation (mel spectrograms)  
+- Data augmentation strategies for robustness (Mixup, SpecAugment)  
+- Training optimization and scheduler tuning (AdamW, OneCycleLR, BatchNorm)  
+- Experiment tracking and model observability with TensorBoard  
+- API design and validation (FastAPI + Pydantic)  
+- Serverless cloud deployment and GPU orchestration using Modal on NVIDIA A10G  
+- Model interpretability (feature maps, confidence)  
+- Failure mode analysis and distribution shift diagnostics  
+- Data product design via interactive Tableau dashboard  
+
+---
+
+## Results & Dashboard
+
+- Validation accuracy: **84%** (example; replace with your actual metric)  
+- Interactive dashboard: [Insert Tableau Public link here]  
+
+---
+
+## Next Steps / Known Limitations
+
+- Frontend/dashboard integration (UI planned with modern stacks)  
+- Confidence calibration and out-of-distribution detection  
+- Automated regression tests on curated “gold” audio samples  
+- Further domain adaptation to reduce inference degradation from distribution shift  
+
+---
+
+## Tech Stack
+
+Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (serverless GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
+
