@@ -28,11 +28,11 @@ class AudioProcessor:
         self.transform = nn.Sequential(
             T.MelSpectrogram(
                 sample_rate=44100,
-                n_fft=2348,
-                hop_length=1912,
-                n_mels=120,
-                f_min=752,
-                f_max=8000
+                n_fft=2048,
+                hop_length=512,
+                n_mels=128,
+                f_min=15,
+                f_max=6000
             ),
             T.AmplitudeToDB()
         )
