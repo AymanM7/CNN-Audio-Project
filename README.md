@@ -92,3 +92,51 @@ This project is an end-to-end audio classification and diagnostics system built 
 
 Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (serverless GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
 
+
+
+## Setup
+
+```bash
+# Clone
+git clone https://github.com/AymanM7/CNN-Audio-Project
+cd CNN-Audio-Project
+
+# Python environment
+python -m venv .venv
+# PowerShell
+.venv\Scripts\Activate.ps1
+# or CMD
+.venv\Scripts\activate.bat
+
+# Backend dependencies
+pip install -r requirements.txt
+
+# Modal setup for Training Network
+modal run train.py
+
+
+# Modal setup and usage
+
+## Modal Setup & Connecting Cloud Infrastructure from VS Code
+
+This project uses **Modal** to run inference serverlessly on **NVIDIA A10G** GPUs. Below are the full steps to connect your local VS Code environment to Modal’s cloud infrastructure and deploy the backend.
+
+### 1. Sign up for Modal
+Create an account at Modal (e.g., via the web UI). Once logged in you’ll have access to your dashboard.
+modal setup
+modal run main.py       # run locally on Modal
+modal deploy main.py    # deploy backend
+
+##Frontend
+Install dependencies:
+
+cd CNN--Project
+npm i
+
+Run :
+npm install
+
+npm run dev
+
+
+
