@@ -1,4 +1,4 @@
-# Deep Audio Classification & Diagnostics on EXC50
+# Deep Audio Classification & Diagnostics on ESC-50 Dataset
 
 ## Project
 
@@ -57,17 +57,16 @@ This project is an end-to-end audio classification and diagnostics system built 
 
 ---
 
-## Skills Demonstrated
+## Skills
 
 - Deep learning architecture design (ResNet-style CNN)  
-- Audio preprocessing and representation (mel spectrograms)  
+- Audio preprocessing and representation. Converting from waverform to Mel Spectogram. (mel spectrograms)  
 - Data augmentation strategies for robustness (Mixup, SpecAugment)  
 - Training optimization and scheduler tuning (AdamW, OneCycleLR, BatchNorm)  
-- Experiment tracking and model observability with TensorBoard  
+- Experiment tracking and model observability with TensorBoard (Included accuracy,validation and Loss Function Graph for CNN Project. 
 - API design and validation (FastAPI + Pydantic)  
 - Serverless cloud deployment and GPU orchestration using Modal on NVIDIA A10G  
-- Model interpretability (feature maps, confidence)  
-- Failure mode analysis and distribution shift diagnostics  
+- Model interpretability (feature maps, confidence, accuracy, bath norm, shortcut , relu)   
 - Data product design via interactive Tableau dashboard  
 
 ---
