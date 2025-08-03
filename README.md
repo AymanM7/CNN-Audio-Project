@@ -68,7 +68,7 @@ Lets users visually and quantitatively compare clips to prioritize which ones to
 - API design and validation (FastAPI + Pydantic)  
 - Serverless cloud deployment and GPU orchestration using Modal on NVIDIA A10G  
 - Model interpretability (feature maps, confidence, accuracy, bath norm, shortcut , relu)   
-- Data product design via interactive Tableau dashboard  
+- Visulization via interactive Tableau dashboard  
 
 ---
 
