@@ -30,30 +30,31 @@ This project is an end-to-end audio classification and diagnostics system built 
    - Confidence-aware predictions highlight uncertainty.  
    - Distribution shift between training data and real-world inference inputs is analyzed to explain degraded performance and surface unreliability.
 
-7. **Performance Visualization**  
-   An **interactive Tableau dashboard** consolidates all diagnostics:
-   - Per-class metrics (precision, recall, F1), confusion matrix  
-   - Confidence calibration and reliability analysis  
-   - Failure mode exploration (high-confidence errors, common confusions)  
-   - Drift visualization comparing training vs inference feature distributions  
-   - Sample-level inspector showing waveform/spectrogram, true vs predicted label, confidence, and feature map thumbnails  
+7. **Dashboard Visualization**
+   Breaks down 11 raw audio clips into perceptual and tonal features: fullness/richness (bandwidth), brightness vs. noisiness, and deeper subtle texture differences.
+
+Highlights outliers or unusual samples based solely on their signal properties—no model or training data comparisons.
+
+Surfaces hidden quirks in sounds via higher-order coefficient deviations.
+
+Lets users visually and quantitatively compare clips to prioritize which ones to investigate further (e.g., by listening or labeling).
 
 ---
 
 ## Features
 
-- 🧠 ResNet-style deep CNN with residual blocks for robust audio feature extraction  
-- 🎼 Mel spectrogram audio-to-image conversion  
-- 🎛️ Advanced augmentation: Mixup and time/frequency masking (SpecAugment-style)  
-- ⚙️ Optimized training pipeline: AdamW optimizer, OneCycleLR scheduler, and Batch Normalization  
-- 📈 TensorBoard logging capturing learning rate schedule, accuracy curves, loss convergence, and training dynamics  
-- 🚀 FastAPI inference endpoint with strict request validation using Pydantic  
-- ⚡ Serverless GPU inference powered by Modal on **NVIDIA A10G** hardware for scalable, on-demand classification  
-- 👁️ Visualization of internal CNN feature maps for interpretability  
-- 📊 Confidence-aware real-time predictions  
-- 🌊 Waveform and spectrogram visualizations for input transparency  
-- 📋 Interactive Tableau dashboard for analysis of  11 specific wav files
-- 🔍 Systematic analysis of distribution shift between training and real inference data  
+-  ResNet-style deep CNN with residual blocks for robust audio feature extraction  
+-  Mel spectrogram audio-to-image conversion  
+-  Advanced augmentation: Mixup and time/frequency masking (SpecAugment-style)  
+-  Optimized training pipeline: AdamW optimizer, OneCycleLR scheduler, and Batch Normalization  
+-  TensorBoard logging capturing learning rate schedule, accuracy curves, loss convergence, and training dynamics  
+-  FastAPI inference endpoint with strict request validation using Pydantic  
+-  Serverless GPU inference powered by Modal on **NVIDIA A10G** hardware for scalable, on-demand classification  
+-  Visualization of internal CNN feature maps for interpretability  
+-  Confidence-aware real-time predictions  
+-  Waveform and spectrogram visualizations for input transparency  
+-  Interactive Tableau dashboard for analysis of  11 specific wav files
+-  Systematic analysis of distribution shift between training and real inference data  
 
 ---
 
