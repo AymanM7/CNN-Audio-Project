@@ -53,7 +53,7 @@ Lets users visually and quantitatively compare clips to prioritize which ones to
 -  Visualization of internal CNN feature maps for interpretability  
 -  Confidence-aware real-time predictions  
 -  Waveform and spectrogram visualizations for input transparency  
--  Interactive Tableau dashboard for analysis of  11 specific wav files
+-  Interactive Tableau dashboard for analysis of  11 specific wav files from the ESC-50 Dataset
 -  Systematic analysis of distribution shift between training and real inference data  
 
 ---
@@ -75,11 +75,29 @@ Lets users visually and quantitatively compare clips to prioritize which ones to
 ## Results & Dashboard
 
 - Validation accuracy: **84%** (example; replace with your actual metric)  
-- Interactive dashboard: [Insert Tableau Public link here]  
+- Interactive dashboard: [Insert Tableau Public link here]
+
 
 ---
 
-## Next Steps / Known Limitations
+## Challenges Faced 
+After deployment on Modal, some audio files (e.g., bird vs. rain) gave inconsistent results because small differences in preprocessing (normalization/scaling, background noise, etc.) and runtime variability like cold starts changed how the model “saw” the sound.
+
+The system always returns the top 3 label guesses with confidence scores (e.g., Bird: 75%, Wind: 10%, Insect: 15%), so outputs are probabilistic—not simply right or wrong—and similar-sounding clips can produce different mixes of scores.
+
+Fixing this meant tightening consistency between training and inference, adding input validation/sanity checks, and making the model more robust to real-world variation.
+
+Different sounds behaved differently: Even if two clips looked similar, some caused errors—showing that real-world audio varies a lot and can confuse the system.
+
+Added toughness to the model: To handle messy or unusual sounds better, we introduced techniques that make the model more resilient to variability.
+
+Early training failed: The first few full training attempts gave poor accuracy because the learning settings weren’t tuned right.
+
+Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting learning speed and adding more varied examples) led to stable, better performance.
+
+
+
+## Next Steps/(Plan)
 
 - Frontend/dashboard integration (UI planned with modern stacks)  
 - Confidence calibration and out-of-distribution detection  
@@ -90,7 +108,7 @@ Lets users visually and quantitatively compare clips to prioritize which ones to
 
 ## Tech Stack
 
-Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (serverless GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
+Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
 
 
 
