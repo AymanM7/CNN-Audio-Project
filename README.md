@@ -20,7 +20,7 @@ This project is an end-to-end audio classification and diagnostics system built 
    Full training dynamics—including learning rate progression, training/validation accuracy, and loss curves—are tracked via **TensorBoard** for experiment transparency and debugging.
 
 4. **Inference Pipeline**  
-   The trained model is exposed via a **FastAPI** endpoint. Requests are schema-validated using **Pydantic** to ensure robustness. Real-time audio inputs are processed, classified, and returned with confidence scores.
+   The trained model is exposed via a **FastAPI**  endpoint. Requests are schema-validated using **Pydantic** to ensure robustness. Real-time audio inputs are processed, classified, and returned with confidence scores.
 
 5. **Cloud Deployment & Scalability**  
    Inference is deployed **serverlessly** using **Modal**, tapping into Modal’s orchestration to run GPU-backed workloads on **NVIDIA A10G** hardware. This design delivers scalable, low-latency classification without persistent infrastructure cost—spinning up GPU resources on demand.
@@ -52,7 +52,7 @@ This project is an end-to-end audio classification and diagnostics system built 
 - 👁️ Visualization of internal CNN feature maps for interpretability  
 - 📊 Confidence-aware real-time predictions  
 - 🌊 Waveform and spectrogram visualizations for input transparency  
-- 📋 Interactive Tableau dashboard for 11 specific wav files
+- 📋 Interactive Tableau dashboard for analysis of  11 specific wav files
 - 🔍 Systematic analysis of distribution shift between training and real inference data  
 
 ---
