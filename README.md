@@ -242,9 +242,12 @@ The output contains the top-3 predicted classes with their probabilites.
 
 ## 9.)  Modal Deployment & Inference Status
 
-This screenshot displays the deployment history for the audio-cnn-inference application hosted on Modal.
-Each entry represents a separate version of the deployed inference service.
-Across the 25 deployments shown, I was able to iteratively test and validate the model’s performance on 25 different .wav audio files, ensuring the classifier could handle a wide range of environmental sounds under real-world conditions.
+- This screenshot displays the deployment history for the audio-cnn-inference application hosted on Modal.
+- Each entry represents a separate version of the deployed inference service.
+- Across the 25 deployments shown, I was able to iteratively test and validate the model’s performance on 25 different .wav audio files, ensuring the classifier could handle a wide range of environmental sounds under real-world conditions.
+- Out of these, 18 audio files were accurately classified with the correct top prediction, showing strong model reliability while also highlighting areas where further robustness is needed for the remaining cases as this Convoluntional Nueral Network.
+- Misclassifications highlight challenges such as overfitting and the model’s occasional difficulty in providing confident, accurate predictions under all conditions for all files and not picking up trends on unseen data.
+
 
 
 ![Screenshot_12-8-2025_163044_docs google com](https://github.com/user-attachments/assets/c6c70070-60aa-4da8-bcc1-d885809ee106)
