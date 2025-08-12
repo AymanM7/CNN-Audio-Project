@@ -116,6 +116,13 @@ By filtering by true class in Tableau, you can compare within-class and between-
 
 The metrics provide insight into potential data preprocessing or augmentation strategies — e.g., balancing loud/quiet samples, augmenting tonal diversity.
 
+10. **Project Arhitecture Diagram/ Workflow**
+
+    
+![Screenshot_12-8-2025_182314_chatgpt com](https://github.com/user-attachments/assets/aac7ec37-a5f4-4088-a77a-02692921e6c4)
+
+    
+
 
 ## 4.) Project Properties 
 
