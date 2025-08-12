@@ -189,10 +189,18 @@ Across the 25 deployments shown, I was able to iteratively test and validate the
 
 
 
+##  Active Application Status 
+
+- Application Name: audio-cnn-inference
+
+- Active Service: AudioClassifier.*
+
+- GPU Hardware: Running on NVIDIA A10G for high-performance inference.
+
+- Web Endpoint: Indicates that the model is live and accessible via a cloud-based API endpoint.
 
 
-
-
+![Screenshot_12-8-2025_163054_docs google com](https://github.com/user-attachments/assets/aec6dc71-a5b3-430f-b203-2e56d6e7bba5)
 
 ---
 
