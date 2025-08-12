@@ -132,6 +132,41 @@ These metrics indicate that the CNN achieved strong generalization on the ESC-50
 
 
 
+## Running Inference with Modal
+
+Once the CNN model has been trained and validated, it can be deployed to serve real-time predictions using Modal’s serverless GPU infrastructure.
+
+
+2.) Deploy the Model :    modal deploy main.py (run this command in your terminal)
+
+This command packages the trained model, configures the FastAPI inference endpoint, and deploys it to Modal’s cloud environment. The endpoint is then accessible via a unique URL.
+
+
+2.) Run the Model Locally on Modal : modal run main.py
+
+This allows testing the deployed inference pipeline directly from your development environment without fully publishing it as web app.
+
+
+3.) How Predictions Work:
+
+The API  endpoint accepts a base64-encoded .wav audio file as input.
+
+The file is converted to a mel spectrogram and passed through the trained CNN.
+
+The output contains the top-3 predicted classes with their probabilites.
+
+
+![Screenshot_12-8-2025_161439_docs google com](https://github.com/user-attachments/assets/1b7f7375-bf7a-4bd2-8b5e-ee0cf0418d7d)
+
+
+
+
+
+
+
+
+![Screenshot_12-8-2025_16170_discord com](https://github.com/user-attachments/assets/5fa88f4e-6751-4a14-be73-50ae74aa4d7d)
+
 
 
 
