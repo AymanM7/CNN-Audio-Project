@@ -12,25 +12,38 @@ This project is an end-to-end audio classification and diagnostics system built 
 2. **Data Augmentation**  
    To improve generalization, advanced augmentations are applied: Mixup and SpecAugment-style time/frequency masking. These introduce robustness to variations and mimic real-world noise/distortions.
 
-3. **Model & Training**  
-   A ResNet-style CNN with residual blocks is trained on the augmented spectrograms. Training is optimized using:
-   - **AdamW optimizer** for decoupled weight decay  
-   - **OneCycleLR learning rate scheduler** for efficient convergence  
-   - **Batch Normalization** for stable and faster training  
-   Full training dynamics—including learning rate progression, training/validation accuracy, and loss curves—are tracked via **TensorBoard** for experiment transparency and debugging.
+3. **Model & Training**
+
+
+ResNet-18 backbone (pretrained on ImageNet, adapted for 1-channel spectrogram input).
+
+Optimization:
+
+AdamW optimizer (decoupled weight decay)
+
+OneCycleLR scheduler (cyclical learning rate for fast convergence)
+
+Batch Normalization** for stable and faster training  
+
+Label smoothing
+
+Training metrics (loss, accuracy, learning rate progression) logged in TensorBoard.
+
 
 4. **Inference Pipeline**  
    The trained model is exposed via a **FastAPI**  endpoint. Requests are schema-validated using **Pydantic** to ensure robustness. Real-time audio inputs are processed, classified, and returned with confidence scores.
+   Accepts base64-encoded audio → preprocesses to mel spectrogram → predicts top-3 classes with confidence scores.
 
-5. **Cloud Deployment & Scalability**  
-   Inference is deployed **serverlessly** using **Modal**, tapping into Modal’s orchestration to run GPU-backed workloads on **NVIDIA A10G** hardware. This design delivers scalable, low-latency classification without persistent infrastructure cost—spinning up GPU resources on demand.
+6. **Cloud Deployment & Scalability**  
+   Inference is deployed **serverlessly** using **Modal**, tapping into Modal’s orchestration to run GPU-backed workloads on **NVIDIA A10G** GPU . This design delivers scalable, low-latency classification without persistent infrastructure cost—spinning up GPU resources on demand.
+   
 
-6. **Interpretability & Diagnostics**  
+7. **Interpretability & Diagnostics**  
    - Internal CNN feature maps are visualized to give insight into what the network is learning.  
    - Confidence-aware predictions highlight uncertainty.  
    - Distribution shift between training data and real-world inference inputs is analyzed to explain degraded performance and surface unreliability.
 
-7. **Dashboard Visualization**
+8. **Dashboard Visualization**
    The Tableau dashboard provides an acoustic feature analysis of 9 selected ESC-50 sound clips, helping to understand and contextualize the data that the CNN model processes.
 
 How it relates to the CNN project:
@@ -40,7 +53,7 @@ These features help explain why certain sounds may be harder to classify — for
 By filtering by true class in Tableau, you can compare within-class and between-class acoustic variability.
 
 The metrics provide insight into potential data preprocessing or augmentation strategies — e.g., balancing loud/quiet samples, augmenting tonal diversity.
----
+
 
 ## Project Properties 
 
@@ -54,7 +67,7 @@ The metrics provide insight into potential data preprocessing or augmentation st
 -  Visualization of internal CNN feature maps for interpretability  
 -  Confidence-aware real-time predictions  
 -  Waveform and spectrogram visualizations for input transparency  
--  Interactive Tableau dashboard for analysis of  11 specific wav files from the ESC-50 Dataset
+-  Interactive Tableau dashboard for analysis of  9 specific wav files from the ESC-50 Dataset
 
 ---
 
