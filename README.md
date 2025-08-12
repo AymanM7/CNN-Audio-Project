@@ -1,7 +1,7 @@
 # Deep Audio Classification & Diagnostics on ESC-50 Dataset
 
 ## Executive Summary
-This project is an end-to-end deep learning audio classification system built for the ESC-50 environmental sound dataset applying CNNS.
+This project is an end-to-end deep learning audio classification system built for the ESC-50 environmental sound dataset applying CNNS(Nueral Networks).
 It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Modal.
 
 
@@ -54,17 +54,17 @@ Deploying the inference pipeline serverlessly with GPU acceleration for cost-eff
 
    
 
-### Overview
+### 1.) Overview
 An environmental sound classification system that ingests raw audio, preprocesses it into mel spectrograms, applies augmentation, trains a ResNet-18 CNN, and serves predictions via a GPU-backed cloud API.
 Includes interpretability tooling (feature maps, confidence scores) and performance monitoring via Tableau dashboards and TensorBoard.
 
 
-### Dataset
+### 2.) Dataset
 Dataset
 ESC-50: 50 balanced classes of environmental sounds (e.g., rain, wind, thunder, insects, dog barking,etc)
 
 
-### Project Architecture
+### 3.)  Project Architecture
 
 1. **Data Ingestion & Preprocessing**  
    Raw audio clips (EXC50/ESC-50 style environmental sounds) are loaded, normalized, and converted into mel spectrograms—effectively turning audio into image-like representations suitable for deep CNNs. Waveform and spectrogram visualizations are generated for transparency.
@@ -115,7 +115,7 @@ By filtering by true class in Tableau, you can compare within-class and between-
 The metrics provide insight into potential data preprocessing or augmentation strategies — e.g., balancing loud/quiet samples, augmenting tonal diversity.
 
 
-## Project Properties 
+## 4.) Project Properties 
 
 -  ResNet-style deep CNN with residual blocks for robust audio feature extraction  
 -  Mel spectrogram audio-to-image conversion  
@@ -131,7 +131,7 @@ The metrics provide insight into potential data preprocessing or augmentation st
 
 ---
 
-## Skills
+## 5.) Skills
 
 - Deep learning architecture design (ResNet-style CNN)  
 - Audio preprocessing and representation. Converting from waverform to Mel Spectogram. (mel spectrograms)  
@@ -145,7 +145,7 @@ The metrics provide insight into potential data preprocessing or augmentation st
 
 ---
 
-## Results From Training the Convolutional Nueral Network 
+## 6.) Results From Training the Convolutional Nueral Network 
 
 - This includes Accuracy/Validation , Learning Rate , The general Loss Function Graph for the Training and Validation Set for the Nueral Network coming from Tensorboard.
 
@@ -166,7 +166,7 @@ The metrics provide insight into potential data preprocessing or augmentation st
 
 
 
-## CNN Training Process
+## 7.) CNN Training Process
 • The Convolutional Neural Network (CNN) was trained over 100 epochs using Modal’s cloud infrastructure on NVIDIA A10G GPUs.
 
 Before starting the training process, Modal must be set up by following the official documentation on their website and running the necessary configuration commands in the terminal. Once configured, training is initiated by executing:  modal run train.py
@@ -192,7 +192,7 @@ These metrics indicate that the CNN achieved strong generalization on the ESC-50
 
 
 
-## Running Inference with Modal
+##  8.) Running Inference with Modal
 
 Once the CNN model has been trained and validated, it can be deployed to serve real-time predictions using Modal’s serverless GPU infrastructure.
 
@@ -238,7 +238,7 @@ The output contains the top-3 predicted classes with their probabilites.
 
 
 
-##  Modal Deployment & Inference Status
+## 9.)  Modal Deployment & Inference Status
 
 This screenshot displays the deployment history for the audio-cnn-inference application hosted on Modal.
 Each entry represents a separate version of the deployed inference service.
@@ -249,7 +249,7 @@ Across the 25 deployments shown, I was able to iteratively test and validate the
 
 
 
-##  Active Application Status 
+## 10.)  Active Application Status 
 
 - Application Name: audio-cnn-inference
 
@@ -264,7 +264,7 @@ Across the 25 deployments shown, I was able to iteratively test and validate the
 
 ---
 
-## Challenges Faced 
+## 11.) Challenges Faced 
 After deployment on Modal, some audio files (e.g., bird vs. rain) gave inconsistent results because small differences in preprocessing (normalization/scaling, background noise, etc.) and runtime variability like cold starts changed how the model “saw” the sound.
 
 The system always returns the top 3 label guesses with confidence scores (e.g., Bird: 75%, Wind: 10%, Insect: 15%), so outputs are probabilistic—not simply right or wrong—and similar-sounding clips can produce different mixes of scores.
@@ -281,7 +281,7 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 
 
-## Next Steps/(Plan)
+## 12.) Next Steps/(Plan)
 
 - Frontend/dashboard integration (UI planned with modern stacks) with deployment to the web
 - Confidence calibration and out-of-distribution detection  
@@ -289,13 +289,13 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 ---
 
-## Tech Stack
+## 13.) Tech Stack
 
 Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
 
 
 
-## Setup
+##  14.) Project Setup
 
 ```bash
 # Clone
