@@ -107,7 +107,7 @@ The metrics provide insight into potential data preprocessing or augmentation st
 
 
 ## CNN Training Process
--The Convolutional Neural Network (CNN) was trained over 100 epochs using Modal’s cloud infrastructure on NVIDIA A10G GPUs.
+•The Convolutional Neural Network (CNN) was trained over 100 epochs using Modal’s cloud infrastructure on NVIDIA A10G GPUs.
 
 Before starting the training process, Modal must be set up by following the official documentation on their website and running the necessary configuration commands in the terminal. Once configured, training is initiated by executing:  modal run train.py
 
