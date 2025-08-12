@@ -1,7 +1,7 @@
 # Deep Audio Classification & Diagnostics on ESC-50 Dataset
 
 ## Executive Summary
-This project is an end-to-end deep learning audio classification system built for the ESC-50 environmental sound dataset applying CNNS(Nueral Networks).
+This project is an end-to-end deep learning audio classification system I built for the ESC-50 environmental sound dataset applying CNNS(Nueral Networks).
 It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Modal.
 
 
@@ -55,8 +55,17 @@ Deploying the inference pipeline serverlessly with GPU acceleration for cost-eff
    
 
 ### 1.) Overview
-An environmental sound classification system that ingests raw audio, preprocesses it into mel spectrograms, applies augmentation, trains a ResNet-18 CNN, and serves predictions via a GPU-backed cloud API.
-Includes interpretability tooling (feature maps, confidence scores) and performance monitoring via Tableau dashboards and TensorBoard.
+I built an environmental sound classification system that:
+
+Converts .wav audio into mel spectrograms
+
+Applies augmentation for robustness
+
+Trains a ResNet-18 CNN
+
+Serves predictions through a FastAPI endpoint with GPU acceleration
+
+Monitoring and interpretabilit and anlysis of specific .wav files  are handled via TensorBoard and Tableau dashboards.
 
 
 ### 2.) Dataset
