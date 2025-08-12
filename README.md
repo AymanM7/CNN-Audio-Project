@@ -116,18 +116,15 @@ The metrics provide insight into potential data preprocessing or augmentation st
 ![Screenshot_12-8-2025_141339_docs google com](https://github.com/user-attachments/assets/0e1d15ee-ee12-45ab-a6c8-b8956d0905bf)
 
 
-- CNN Training Process
+## CNN Training Process
 The Convolutional Neural Network (CNN) was trained over 100 epochs using Modal’s cloud infrastructure on NVIDIA A10G GPUs.
 
-Before starting the training process, Modal must be set up by following the official documentation and running the necessary configuration commands in the terminal. Once configured, training is initiated by executing:
+Before starting the training process, Modal must be set up by following the official documentation on their website and running the necessary configuration commands in the terminal. Once configured, training is initiated by executing:  modal run train.py
 
-bash
-Copy
-Edit
-modal run train.py
-This command launches the full training pipeline, including data preprocessing, augmentation, and model optimization. Throughout the 100 training epochs, TensorBoard logs record training accuracy, validation accuracy, and validation loss for performance monitoring.
 
-Final Results:
+This command launches the full training pipeline, including data preprocessing, augmentation, and model optimization. Throughout the 100 training epochs, TensorBoard logs  training accuracy and validation loss for performance monitoring.
+
+Final Results From My Training:
 
 Validation Accuracy: 83.75%
 
@@ -136,10 +133,6 @@ Validation Loss: 1.2997
 These metrics indicate that the CNN achieved strong generalization on the ESC-50 test fold, with relatively low classification error given the dataset’s diversity.
 
 
-
-
-
-  
 
 
 
