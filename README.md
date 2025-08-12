@@ -140,9 +140,9 @@ modal run train.py
 This project uses **Modal** to run inference serverlessly on **NVIDIA A10G** GPUs. Below are the full steps to connect your local VS Code environment to Modal’s cloud infrastructure and deploy the backend.
 
 ### 1. Sign up for Modal
-Create an account at Modal (e.g., via the web UI). Once logged in you’ll have access to your dashboard.
+Create an account at Modal via your github account (e.g., via the web UI). Once logged in you’ll have access to your dashboard.
 modal setup
-modal run main.py       # run locally on Modal
+modal run main.py       # run locally on Modal(cloud)
 modal deploy main.py    # deploy backend
 
 ##Frontend
