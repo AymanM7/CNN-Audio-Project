@@ -42,10 +42,14 @@ Deploying the inference pipeline serverlessly with GPU acceleration for cost-eff
 10. Setup Instructions
    
 
-## Overview
+### Overview
 An environmental sound classification system that ingests raw audio, preprocesses it into mel spectrograms, applies augmentation, trains a ResNet-18 CNN, and serves predictions via a GPU-backed cloud API.
 Includes interpretability tooling (feature maps, confidence scores) and performance monitoring via Tableau dashboards and TensorBoard.
 
+
+### Dataset
+Dataset
+ESC-50: 50 balanced classes of environmental sounds (e.g., rain, wind, thunder, insects, dog barking,etc)
 
 
 ### Project Architecture
