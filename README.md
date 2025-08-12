@@ -31,15 +31,27 @@ Deploying the inference pipeline serverlessly with GPU acceleration for cost-eff
 
 ## Table of Contents
 1. Overview
-2. Project Arhitecture
-3. ESC-50 Dataset
-4. Training Pipeline
-5. Deployment
-6. Results
-7. Quick Start Infrence Example
-8. Challenges and Lessons Learned
-9. Next Steps/ Future
-10. Setup Instructions
+2. ESC-50 Dataset
+3. Project Architecture
+   - Data Ingestion + Preprocessing
+   - Data Augmentation
+   - Model and Training
+   - Infrence Pipeline
+   - Cloud Deployment + Scalability
+   - Tableau Dashboard to analyze 9 speciic audio files.
+
+ 4. Project Properties
+ 5. Skills
+ 6. Results From Traning the Convolutional Nueral Network
+ 7. CNN training process
+ 8. Running Inference with Modal
+ 9. Modal Deployment + Infrence Status
+ 10. Active Application Status
+ 11. Challenges Faced
+ 12. Next Steps/ Future Plans for Project
+ 13. Tech Stack
+ 14. Project Setup
+
    
 
 ### Overview
