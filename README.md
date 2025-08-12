@@ -49,12 +49,11 @@ Lets users visually and quantitatively compare clips to prioritize which ones to
 -  Optimized training pipeline: AdamW optimizer, OneCycleLR scheduler, and Batch Normalization  
 -  TensorBoard logging capturing learning rate schedule, accuracy curves, loss convergence, and training dynamics  
 -  FastAPI inference endpoint with strict request validation using Pydantic  
--  Serverless GPU inference powered by Modal on **NVIDIA A10G** hardware for scalable, on-demand classification  
+-   GPU inference powered by Modal on **NVIDIA A10G** hardware for scalable, on-demand classification  
 -  Visualization of internal CNN feature maps for interpretability  
 -  Confidence-aware real-time predictions  
 -  Waveform and spectrogram visualizations for input transparency  
 -  Interactive Tableau dashboard for analysis of  11 specific wav files from the ESC-50 Dataset
--  Systematic analysis of distribution shift between training and real inference data  
 
 ---
 
@@ -99,9 +98,8 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 ## Next Steps/(Plan)
 
-- Frontend/dashboard integration (UI planned with modern stacks)  
+- Frontend/dashboard integration (UI planned with modern stacks) with deployment to the web
 - Confidence calibration and out-of-distribution detection  
-- Automated regression tests on curated “gold” audio samples  
 - Further domain adaptation to reduce inference degradation from distribution shift  
 
 ---
