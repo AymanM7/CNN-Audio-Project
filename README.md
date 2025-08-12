@@ -107,6 +107,10 @@ The metrics provide insight into potential data preprocessing or augmentation st
 
 
 
+
+- This describes how the training of CNN network was done for the 100 epochs. As to start training you have to first setup modal and follow their documentation and run some commands on your terminal. After that you can hit the commands modal train.py then the model will train for 100 Epochs and represent the accuracy and Validation Loss. As for my results it displays a accuracy of 83.75$ for the CNN and a Validatiol Loss of 1.2997.
+
+
 ![Screenshot_12-8-2025_141339_docs google com](https://github.com/user-attachments/assets/0e1d15ee-ee12-45ab-a6c8-b8956d0905bf)
 
 
