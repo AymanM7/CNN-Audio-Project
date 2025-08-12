@@ -137,7 +137,7 @@ These metrics indicate that the CNN achieved strong generalization on the ESC-50
 Once the CNN model has been trained and validated, it can be deployed to serve real-time predictions using Modal’s serverless GPU infrastructure.
 
 
-2.) Deploy the Model :    modal deploy main.py (run this command in your terminal)
+1.) Deploy the Model :    modal deploy main.py (run this command in your terminal)
 
 This command packages the trained model, configures the FastAPI inference endpoint, and deploys it to Modal’s cloud environment. The endpoint is then accessible via a unique URL.
 
@@ -168,7 +168,7 @@ The output contains the top-3 predicted classes with their probabilites.
 
 
 
-# Example 2 : Airplane.wav audio file( as you can see this prediction is a bit off when tested.)
+# Example 2 : Airplane.wav audio file
 -- Model prediction is less accurate, highlighting that similar spectral patterns in different environmental sounds can cause classification challenges.
 
 ![Screenshot_12-8-2025_16170_discord com](https://github.com/user-attachments/assets/5fa88f4e-6751-4a14-be73-50ae74aa4d7d)
@@ -197,7 +197,7 @@ Across the 25 deployments shown, I was able to iteratively test and validate the
 
 - GPU Hardware: Running on NVIDIA A10G for high-performance inference.
 
-- Web Endpoint: Indicates that the model is live and accessible via a cloud-based API endpoint.
+- Web Endpoint: Indicates that the model is live and accessible via a cloud-based web API endpoint.
 
 
 ![Screenshot_12-8-2025_163054_docs google com](https://github.com/user-attachments/assets/aec6dc71-a5b3-430f-b203-2e56d6e7bba5)
