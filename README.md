@@ -142,7 +142,7 @@ Once the CNN model has been trained and validated, it can be deployed to serve r
 This command packages the trained model, configures the FastAPI inference endpoint, and deploys it to Modal’s cloud environment. The endpoint is then accessible via a unique URL.
 
 
-2.) Run the Model Locally on Modal : modal run main.py
+2.) Run the Model Locally on Modal : modal run main.py (run this command in your terminal)
 
 This allows testing the deployed inference pipeline directly from your development environment without fully publishing it as web app.
 
