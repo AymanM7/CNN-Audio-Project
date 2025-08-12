@@ -10,24 +10,17 @@ It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN f
 Environmental sound recognition is crucial in domains like smart cities, wildlife monitoring, industrial safety, and assistive technologies.
 However, real-world audio classification faces several key challenges:
 
-Spectral Similarity – Sounds like wind and rain have nearly identical frequency patterns, confusing classifiers.
+Challenges include:
 
-Environmental Noise & Variability – Background noise, microphone quality, and recording conditions degrade model accuracy.
+ • Spectral Similarity — Similar frequency patterns (e.g., wind vs. rain) confuse models.
 
-Distribution Shift – Models trained on clean datasets often fail in real-world deployments due to unseen sound variations.
+• Noise & Variability — Background sounds, mic quality, and recording conditions reduce accuracy.
 
-Scalability & Latency – Running inference for high volumes of audio in real time is computationally expensive.
+• Distribution Shift — Models trained on clean datasets struggle with unseen real-world data.
 
-This project solves these challenges by:
+• Scalability & Latency — Real-time, high-volume inference demands heavy compute.
 
-Using mel spectrogram transformations to create rich time–frequency representations of audio.
-
-Applying advanced data augmentation (Mixup & SpecAugment) to improve robustness.
-
-Leveraging ResNet-style CNNs for high-capacity feature extraction.
-
-Deploying the inference pipeline serverlessly with GPU acceleration for cost-effective scalability.
-
+• This project addresses these by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification.
 
 ## Table of Contents
 1. [Overview](#1-overview)
