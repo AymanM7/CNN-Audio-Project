@@ -1,7 +1,7 @@
 # Deep Audio Classification & Diagnostics on ESC-50 Dataset
 
 ## Executive Summary
-This project is an end-to-end deep learning audio classification system I built for the ESC-50 environmental sound dataset applying CNNS(Nueral Networks).
+This project is an end-to-end deep learning audio classification system, I built for the ESC-50 environmental sound dataset applying CNNs(Nueral Networks).
 It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Modal.
 
 
@@ -30,27 +30,27 @@ Deploying the inference pipeline serverlessly with GPU acceleration for cost-eff
 
 
 ## Table of Contents
-1. Overview
-2. ESC-50 Dataset
-3. Project Architecture
-   - Data Ingestion + Preprocessing
-   - Data Augmentation
-   - Model and Training
-   - Infrence Pipeline
-   - Cloud Deployment + Scalability
-   - Tableau Dashboard to analyze 9 speciic audio files.
-
- 4. Project Properties
- 5. Skills
- 6. Results From Traning the Convolutional Nueral Network
- 7. CNN training process
- 8. Running Inference with Modal
- 9. Modal Deployment + Infrence Status
- 10. Active Application Status
- 11. Challenges Faced
- 12. Next Steps/ Future Plans for Project
- 13. Tech Stack
- 14. Project Setup
+1. [Overview](#1-overview)
+2. [Dataset](#2-dataset)
+3. [Project Architecture](#3-project-architecture)
+   - [Data Ingestion & Preprocessing](#data-ingestion--preprocessing)
+   - [Data Augmentation](#data-augmentation)
+   - [Model & Training](#model--training)
+   - [Inference Pipeline](#inference-pipeline)
+   - [Cloud Deployment & Scalability](#cloud-deployment--scalability)
+   - [Dashboard Visualization](#dashboard-visualization)
+4. [Project Properties](#4-project-properties)
+5. [Skills](#5-skills)
+6. [Results From Training the Convolutional Neural Network](#6-results-from-training-the-convolutional-nueral-network)
+7. [CNN Training Process](#7-cnn-training-process)
+8. [Running Inference with Modal](#8-running-inference-with-modal)
+9. [Modal Deployment & Inference Status](#9-modal-deployment--inference-status)
+10. [Active Application Status](#10-active-application-status)
+11. [Results Table](#11-results-table)
+12. [Challenges Faced](#12-challenges-faced)
+13. [Next Steps/(Plan)](#13-next-stepsplan)
+14. [Tech Stack](#14-tech-stack)
+15. [Project Setup](#15-project-setup)
 
    
 
@@ -271,9 +271,16 @@ Across the 25 deployments shown, I was able to iteratively test and validate the
 
 ![Screenshot_12-8-2025_163054_docs google com](https://github.com/user-attachments/assets/aec6dc71-a5b3-430f-b203-2e56d6e7bba5)
 
+## 11.) Results Table 
+
+Metric Values
+Validation Accuracy	83.75%
+Validation Loss	1.2997
+Inference Latency	<2s (GPU)
+
 ---
 
-## 11.) Challenges Faced 
+## 12.) Challenges Faced 
 After deployment on Modal, some audio files (e.g., bird vs. rain) gave inconsistent results because small differences in preprocessing (normalization/scaling, background noise, etc.) and runtime variability like cold starts changed how the model “saw” the sound.
 
 The system always returns the top 3 label guesses with confidence scores (e.g., Bird: 75%, Wind: 10%, Insect: 15%), so outputs are probabilistic—not simply right or wrong—and similar-sounding clips can produce different mixes of scores.
@@ -290,7 +297,7 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 
 
-## 12.) Next Steps/(Plan)
+## 13.) Next Steps/(Plan)
 
 - Frontend/dashboard integration (UI planned with modern stacks) with deployment to the web
 - Confidence calibration and out-of-distribution detection  
@@ -298,13 +305,13 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 ---
 
-## 13.) Tech Stack
+## 14.) Tech Stack
 
 Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
 
 
 
-##  14.) Project Setup
+##  15.) Project Setup
 
 ```bash
 # Clone
