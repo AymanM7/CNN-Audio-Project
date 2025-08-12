@@ -1,8 +1,52 @@
 # Deep Audio Classification & Diagnostics on ESC-50 Dataset
 
-## Project
+## Executive Summary
+This project is an end-to-end deep learning audio classification system built for the ESC-50 environmental sound dataset applying CNNS.
+It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Modal.
 
-This project is an end-to-end audio classification and diagnostics system built from the ground up. It ingests environmental sound recordings, preprocesses and augments them, trains a ResNet-style convolutional neural network on mel spectrogram representations, and exposes real-time inference via a robust API. The entire inference pipeline is deployed serverlessly using Modal’s cloud infrastructure, leveraging **NVIDIA A10G** GPUs for scalable, on-demand audio classification. Comprehensive observability (via TensorBoard) and interpretability tooling are integrated, and an interactive Tableau dashboard surfaces performance, confidence, distribution shift, and failure modes—turning model behavior (including real-world degradation) into actionable insight.
+
+
+## Problem Statement
+Environmental sound recognition is crucial in domains like smart cities, wildlife monitoring, industrial safety, and assistive technologies.
+However, real-world audio classification faces several key challenges:
+
+Spectral Similarity – Sounds like wind and rain have nearly identical frequency patterns, confusing classifiers.
+
+Environmental Noise & Variability – Background noise, microphone quality, and recording conditions degrade model accuracy.
+
+Distribution Shift – Models trained on clean datasets often fail in real-world deployments due to unseen sound variations.
+
+Scalability & Latency – Running inference for high volumes of audio in real time is computationally expensive.
+
+This project solves these challenges by:
+
+Using mel spectrogram transformations to create rich time–frequency representations of audio.
+
+Applying advanced data augmentation (Mixup & SpecAugment) to improve robustness.
+
+Leveraging ResNet-style CNNs for high-capacity feature extraction.
+
+Deploying the inference pipeline serverlessly with GPU acceleration for cost-effective scalability.
+
+
+## Table of Contents
+1. Overview
+2. Project Arhitecture
+3. ESC-50 Dataset
+4. Training Pipeline
+5. Deployment
+6. Results
+7. Quick Start Infrence Example
+8. Challenges and Lessons Learned
+9. Next Steps/ Future
+10. Setup Instructions
+   
+
+## Overview
+An environmental sound classification system that ingests raw audio, preprocesses it into mel spectrograms, applies augmentation, trains a ResNet-18 CNN, and serves predictions via a GPU-backed cloud API.
+Includes interpretability tooling (feature maps, confidence scores) and performance monitoring via Tableau dashboards and TensorBoard.
+
+
 
 ### Project Architecture
 
@@ -36,14 +80,14 @@ Training metrics (loss, accuracy, learning rate progression) logged in TensorBoa
 
 6. **Cloud Deployment & Scalability**  
    Inference is deployed **serverlessly** using **Modal**, tapping into Modal’s orchestration to run GPU-backed workloads on **NVIDIA A10G** GPU . This design delivers scalable, low-latency classification without persistent infrastructure cost—spinning up GPU resources on demand.
-   
 
-7. **Interpretability & Diagnostics**  
+      
+8. **Interpretability & Diagnostics**  
    - Internal CNN feature maps are visualized to give insight into what the network is learning.  
    - Confidence-aware predictions highlight uncertainty.  
    - Distribution shift between training data and real-world inference inputs is analyzed to explain degraded performance and surface unreliability.
 
-8. **Dashboard Visualization**
+9. **Dashboard Visualization**
    The Tableau dashboard provides an acoustic feature analysis of 9 selected ESC-50 sound clips, helping to understand and contextualize the data that the CNN model processes.
 
 How it relates to the CNN project:
