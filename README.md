@@ -31,17 +31,18 @@ This project is an end-to-end audio classification and diagnostics system built 
    - Distribution shift between training data and real-world inference inputs is analyzed to explain degraded performance and surface unreliability.
 
 7. **Dashboard Visualization**
-   Breaks down 11 raw audio clips into perceptual and tonal features: fullness/richness (bandwidth), brightness vs. noisiness, and deeper subtle texture differences.
+   The Tableau dashboard provides an acoustic feature analysis of 9 selected ESC-50 sound clips, helping to understand and contextualize the data that the CNN model processes.
 
-Highlights outliers or unusual samples based solely on their signal properties—no model or training data comparisons.
+How it relates to the CNN project:
 
-Surfaces hidden quirks in sounds via higher-order coefficient deviations.
+These features help explain why certain sounds may be harder to classify — for example, “wind” and “rain” may have similar spectral profiles, leading to model confusion.
 
-Lets users visually and quantitatively compare clips to prioritize which ones to investigate further (e.g., by listening or labeling).
+By filtering by true class in Tableau, you can compare within-class and between-class acoustic variability.
 
+The metrics provide insight into potential data preprocessing or augmentation strategies — e.g., balancing loud/quiet samples, augmenting tonal diversity.
 ---
 
-## Features
+## Project Properties 
 
 -  ResNet-style deep CNN with residual blocks for robust audio feature extraction  
 -  Mel spectrogram audio-to-image conversion  
@@ -71,10 +72,15 @@ Lets users visually and quantitatively compare clips to prioritize which ones to
 
 ---
 
-## Results & Dashboard
+## Results From Training the Convolutional Nueral Network 
 
-- Validation accuracy: **84%** (example; replace with your actual metric)  
-- Interactive dashboard: [Insert Tableau Public link here]
+- This includes Accuracy/Validation , Learning Rate , The general Loss Function Graph for the Training and Validation Set for the Nueral Network coming from Tensorboard.
+
+ 
+
+  
+![Screenshot_5-8-2025_212735_dataplatform cloud ibm com](https://github.com/user-attachments/assets/cca97e2c-0a75-48c7-9c49-3d3157fdd4d5)
+
 
 
 ---
