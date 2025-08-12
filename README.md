@@ -77,9 +77,9 @@ The metrics provide insight into potential data preprocessing or augmentation st
 - This includes Accuracy/Validation , Learning Rate , The general Loss Function Graph for the Training and Validation Set for the Nueral Network coming from Tensorboard.
 
  
+![Screenshot_12-8-2025_13116_docs google com](https://github.com/user-attachments/assets/6f0db1aa-f3dc-4632-9b6b-e4f4c61dfff9)
 
   
-![Screenshot_5-8-2025_212735_dataplatform cloud ibm com](https://github.com/user-attachments/assets/cca97e2c-0a75-48c7-9c49-3d3157fdd4d5)
 
 
 
