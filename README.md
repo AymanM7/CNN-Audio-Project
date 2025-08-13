@@ -21,23 +21,24 @@ These challenges have direct implications in critical sectors. In smart city inf
 In this project, I address these real-world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification
 
 ## Table of Contents
-### [1.) Overview](#overview)
-### [2.) Dataset](#dataset)
-### [3.) Project Architecture](#project-architecture)
-### [4.) Project Properties](#project-properties)
-### [5.) Skills](#skills)
-### [6.) Results From Training the Convolutional Nueral Network](#results-from-training-the-convolutional-nueral-network)
-### [7.) CNN Training Process](#cnn-training-process)
-### [8.) Running Inference with Modal](#running-inference-with-modal)
-### [9.) Modal Deployment & Inference Status](#modal-deployment--inference-status)
-### [10.) Active Application Status](#active-application-status)
-### [11.) Results Table](#results-table)
-### [12.) Dashboard Visulization](#dashboard-visulization)
-### [13.) Challenges Faced](#challenges-faced)
-### [14.) What I Learned](#what-i-learned)
-### [15.) Next Steps/(Plan)](#next-stepsplan)
-### [16.) Tech Stack](#tech-stack)
-### [17.) Project Setup](#project-setup)
+### [1.) Overview](#1-overview)
+### [2.) Dataset](#2-dataset)
+### [3.) Project Architecture](#3-project-architecture)
+### [4.) Project Properties](#4-project-properties)
+### [5.) Skills](#5-skills)
+### [6.) Results From Training the Convolutional Neural Network](#6-results-from-training-the-convolutional-neural-network)
+### [7.) CNN Training Process](#7-cnn-training-process)
+### [8.) Running Inference with Modal](#8-running-inference-with-modal)
+### [9.) Modal Deployment & Inference Status](#9-modal-deployment--inference-status)
+### [10.) Active Application Status](#10-active-application-status)
+### [11.) Results Table](#11-results-table)
+### [12.) Dashboard Visualization](#12-dashboard-visualization)
+### [13.) Challenges Faced](#13-challenges-faced)
+### [14.) What I Learned](#14-what-i-learned)
+### [15.) Next Steps/(Plan)](#15-next-stepsplan)
+### [16.) Tech Stack](#16-tech-stack)
+### [17.) Project Setup](#17-project-setup)
+
 
 
 
