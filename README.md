@@ -20,7 +20,7 @@ Challenges include:
 
 • Scalability & Latency — Real-time, high-volume inference demands heavy compute.
 
-• This project addresses these by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification.
+• In this project I address these real world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification.
 
 ## Table of Contents
 1. [Overview](#1-overview)
