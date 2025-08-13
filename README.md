@@ -314,7 +314,7 @@ Inference Latency	:<2s (GPU)
 ![Screenshot_12-8-2025_125529_public tableau com](https://github.com/user-attachments/assets/4b46a76b-6c32-4506-b4be-7ca9ca0b88ce)
 
 
-Link to View Full Dashboard in Detail :  <a href=" <a href="https://public.tableau.com/app/profile/ayman.mohammad/viz/ESC-50AudioSampleInsightsDashboard/ESC-50AudioSampleInsights" target="_blank">View Entire Dashboard</a>
+Link to View Full Dashboard in Detail :   <a href="https://public.tableau.com/app/profile/ayman.mohammad/viz/ESC-50AudioSampleInsightsDashboard/ESC-50AudioSampleInsights" target="_blank">View Entire Dashboard</a>
 " target="_blank">View Entire Dashboard</a>
 
 
