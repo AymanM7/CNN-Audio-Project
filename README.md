@@ -5,22 +5,20 @@ This project is an end-to-end deep learning audio classification system, I built
 It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Modal.
 
 
-
 ## Problem Statement
-Environmental sound recognition is crucial in domains like smart cities, wildlife monitoring, industrial safety, and assistive technologies.
-However, real-world audio classification faces several key challenges:
+Environmental sound recognition is crucial in domains like smart cities, wildlife monitoring, industrial safety, and assistive technologies. However, real-world audio classification faces several key challenges:
 
-Challenges include:
+Spectral Similarity — Similar frequency patterns (e.g., wind vs. rain) can confuse models.
 
- • Spectral Similarity — Similar frequency patterns (e.g., wind vs. rain) confuse models.
+Noise & Variability — Background sounds, microphone quality, and recording conditions can reduce accuracy.
 
-• Noise & Variability — Background sounds, mic quality, and recording conditions reduce accuracy.
+Distribution Shift — Models trained on clean datasets often struggle with unseen real-world data.
 
-• Distribution Shift — Models trained on clean datasets struggle with unseen real-world data.
+Scalability & Latency — Real-time, high-volume inference demands significant compute resources.
 
-• Scalability & Latency — Real-time, high-volume inference demands heavy compute.
+These challenges have direct implications in critical sectors. In smart city infrastructure, accurate sound recognition can enable automated detection of hazardous events such as sirens, explosions, or breaking glass, supporting faster emergency response. In wildlife conservation, it can identify endangered species through acoustic monitoring, enabling non-invasive population tracking. In industrial settings, it can detect early signs of equipment malfunction, preventing costly downtime and improving safety. For assistive technologies, such as devices for the hearing-impaired, reliable classification provides real-time alerts for important environmental cues.
 
-• In this project I address these real world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification.
+In this project, I address these real-world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification
 
 ## Table of Contents
 1. [Overview](#1-overview)
@@ -338,7 +336,15 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 
 
-## 14.) Next Steps/(Plan)
+## 14.) What I Learned
+
+This project reinforced the importance of aligning the training and inference pipelines to ensure consistent model performance. I learned how small variations in preprocessing, scaling, and augmentation can significantly affect classification accuracy in real-world deployment. Through iterative debugging and hyperparameter tuning and altering, I developed a deeper understanding of  strategies for CNN-based audio models, the trade-offs between latency and accuracy in GPU inference, and the value of rigorous validation across diverse input conditions. Additionally, integrating interpretability tools and dashboard analytics taught me how to communicate model behavior to both technical and non-technical stakeholders, which is crucial for deploying AI solutions in practical domains.
+
+
+
+
+
+## 15.) Next Steps/(Plan)
 
 - Frontend/dashboard integration (UI planned with modern stacks) with deployment to the web
 - Confidence calibration and out-of-distribution detection  
@@ -346,13 +352,13 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 ---
 
-## 15.) Tech Stack
+## 16.) Tech Stack
 
 Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
 
 
 
-##  16.) Project Setup
+##  17.) Project Setup
 
 ```bash
 # Clone
