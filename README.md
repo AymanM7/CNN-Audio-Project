@@ -118,7 +118,7 @@ The metrics provide insight into potential data preprocessing or augmentation st
 
 
 
-10. CNN Application/Worflow in Project
+10. **CNN Application/Worflow in Project**
 
     
     ![Screenshot_12-8-2025_125413_chatgpt com](https://github.com/user-attachments/assets/4e802143-fba8-4ff5-8fe6-5ce642097641)
@@ -293,7 +293,7 @@ Inference Latency	:<2s (GPU)
 
 
 
-##12.) Dashboard Visulization 
+## 12.) Dashboard Visulization 
 
 
 - Interactive Analysis of 9 selected ESC-50 environmental sound clips, focusing on key acoustic properties.
