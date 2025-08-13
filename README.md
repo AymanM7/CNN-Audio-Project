@@ -21,23 +21,24 @@ These challenges have direct implications in critical sectors. In smart city inf
 In this project, I address these real-world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification
 
 ## Table of Contents
-### [1.) Overview](#overview-sec1)  
-### [2.) Dataset](#dataset-sec2)  
-### [3.) Project Architecture](#project-architecture-sec3)  
-### [4.) Project Properties](#project-properties-sec4)  
-### [5.) Skills](#skills-sec5)  
-### [6.) Results From Training the Convolutional Nueral Network](#results-from-training-the-convolutional-nueral-network-sec6)  
-### [7.) CNN Training Process](#cnn-training-process-sec7)  
-### [8.) Running Inference with Modal](#running-inference-with-modal-sec8)  
-### [9.) Modal Deployment & Inference Status](#modal-deployment--inference-status-sec9)  
-### [10.) Active Application Status](#active-application-status-sec10)  
-### [11.) Results Table](#results-table-sec11)  
-### [12.) Dashboard Visulization](#dashboard-visulization-sec12)  
-### [13.) Challenges Faced](#challenges-faced-sec13)  
-### [14.) What I Learned](#what-i-learned-sec14)  
-### [15.) Next Steps/(Plan)](#next-stepsplan-sec15)  
-### [16.) Tech Stack](#tech-stack-sec16)  
-### [17.) Project Setup](#project-setup-sec17)  
+<h3 id="sec-overview">1.) Overview</h3>
+<h3 id="sec-dataset">2.) Dataset</h3>
+<h3 id="sec-architecture">3.)  Project Architecture</h3>
+<h3 id="sec-properties">4.) Project Properties</h3>
+<h3 id="sec-skills">5.) Skills</h3>
+<h3 id="sec-results-cnn">6.) Results From Training the Convolutional Nueral Network</h3>
+<h3 id="sec-training-process">7.) CNN Training Process</h3>
+<h3 id="sec-inference-modal">8.) Running Inference with Modal</h3>
+<h3 id="sec-deploy-status">9.)  Modal Deployment & Inference Status</h3>
+<h3 id="sec-active-status">10.)  Active Application Status</h3>
+<h3 id="sec-results-table">11.) Results Table</h3>
+<h3 id="sec-dashboard">12.) Dashboard Visulization</h3>
+<h3 id="sec-challenges">13.) Challenges Faced</h3>
+<h3 id="sec-learned">14.) What I Learned</h3>
+<h3 id="sec-next">15.) Next Steps/(Plan)</h3>
+<h3 id="sec-tech-stack">16.) Tech Stack</h3>
+<h3 id="sec-setup">17.) Project Setup</h3>
+
 
 
 ### 1.) Overview
