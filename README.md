@@ -21,23 +21,24 @@ These challenges have direct implications in critical sectors. In smart city inf
 In this project, I address these real-world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification
 
 ## Table of Contents
-### [1.) Overview](#sec-01)
-### [2.) Dataset](#sec-02)
-### [3.) Project Architecture](#sec-03)
-### [4.) Project Properties](#sec-04)
-### [5.) Skills](#sec-05)
-### [6.) Results From Training the Convolutional Nueral Network](#sec-06)
-### [7.) CNN Training Process](#sec-07)
-### [8.) Running Inference with Modal](#sec-08)
-### [9.) Modal Deployment & Inference Status](#sec-09)
-### [10.) Active Application Status](#sec-10)
-### [11.) Results Table](#sec-11)
-### [12.) Dashboard Visulization](#sec-12)
-### [13.) Challenges Faced](#sec-13)
-### [14.) What I Learned](#sec-14)
-### [15.) Next Steps/(Plan)](#sec-15)
-### [16.) Tech Stack](#sec-16)
-### [17.) Project Setup](#sec-17)
+### [1.) Overview](#overview)
+### [2.) Dataset](#dataset)
+### [3.) Project Architecture](#project-architecture)
+### [4.) Project Properties](#project-properties)
+### [5.) Skills](#skills)
+### [6.) Results From Training the Convolutional Nueral Network](#results-from-training-the-convolutional-nueral-network)
+### [7.) CNN Training Process](#cnn-training-process)
+### [8.) Running Inference with Modal](#running-inference-with-modal)
+### [9.) Modal Deployment & Inference Status](#modal-deployment--inference-status)
+### [10.) Active Application Status](#active-application-status)
+### [11.) Results Table](#results-table)
+### [12.) Dashboard Visulization](#dashboard-visulization)
+### [13.) Challenges Faced](#challenges-faced)
+### [14.) What I Learned](#what-i-learned)
+### [15.) Next Steps/(Plan)](#next-stepsplan)
+### [16.) Tech Stack](#tech-stack)
+### [17.) Project Setup](#project-setup)
+
 
 
 ### 1.) Overview
