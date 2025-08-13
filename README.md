@@ -21,23 +21,23 @@ These challenges have direct implications in critical sectors. In smart city inf
 In this project, I address these real-world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification
 
 ## Table of Contents
-<h3 id="sec-overview">1.) Overview</h3>
-<h3 id="sec-dataset">2.) Dataset</h3>
-<h3 id="sec-architecture">3.)  Project Architecture</h3>
-<h3 id="sec-properties">4.) Project Properties</h3>
-<h3 id="sec-skills">5.) Skills</h3>
-<h3 id="sec-results-cnn">6.) Results From Training the Convolutional Nueral Network</h3>
-<h3 id="sec-training-process">7.) CNN Training Process</h3>
-<h3 id="sec-inference-modal">8.) Running Inference with Modal</h3>
-<h3 id="sec-deploy-status">9.)  Modal Deployment & Inference Status</h3>
-<h3 id="sec-active-status">10.)  Active Application Status</h3>
-<h3 id="sec-results-table">11.) Results Table</h3>
-<h3 id="sec-dashboard">12.) Dashboard Visulization</h3>
-<h3 id="sec-challenges">13.) Challenges Faced</h3>
-<h3 id="sec-learned">14.) What I Learned</h3>
-<h3 id="sec-next">15.) Next Steps/(Plan)</h3>
-<h3 id="sec-tech-stack">16.) Tech Stack</h3>
-<h3 id="sec-setup">17.) Project Setup</h3>
+### [1.) Overview](#sec-overview)
+### [2.) Dataset](#sec-dataset)
+### [3.) Project Architecture](#sec-architecture)
+### [4.) Project Properties](#sec-properties)
+### [5.) Skills](#sec-skills)
+### [6.) Results From Training the Convolutional Nueral Network](#sec-results-cnn)
+### [7.) CNN Training Process](#sec-training-process)
+### [8.) Running Inference with Modal](#sec-inference-modal)
+### [9.) Modal Deployment & Inference Status](#sec-deploy-status)
+### [10.) Active Application Status](#sec-active-status)
+### [11.) Results Table](#sec-results-table)
+### [12.) Dashboard Visulization](#sec-dashboard)
+### [13.) Challenges Faced](#sec-challenges)
+### [14.) What I Learned](#sec-learned)
+### [15.) Next Steps/(Plan)](#sec-next)
+### [16.) Tech Stack](#sec-tech-stack)
+### [17.) Project Setup](#sec-setup)
 
 
 
