@@ -286,13 +286,42 @@ The output contains the top-3 predicted classes with their probabilites.
 ## 11.) Results Table 
 
 Metric Values
-Validation Accuracy	83.75%
-Validation Loss	1.2997
-Inference Latency	<2s (GPU)
+Validation Accuracy	:83.75%
+Validation Loss	 :1.2997
+Inference Latency	:<2s (GPU)
+
+
+
+
+##12.) Dashboard Visulization 
+
+
+- Interactive Analysis of 9 selected ESC-50 environmental sound clips, focusing on key acoustic properties.
+
+- Frequency Spread chart highlights “bright” vs. “dark” sounds based on spectral bandwidth.
+
+- Mel-Spectrogram Heatmap visualizes average dB energy distribution across frequencies.
+
+- Clip Feature Distribution plots spectral centroid for class brightness comparisons.
+
+- RMS Energy Comparison shows loud vs. quiet sounds for amplitude-based separability.
+
+- If the CNN misclassifies a clip, you can cross-reference this dashboard to see if low RMS energy, narrow bandwidth, or low spectral centroid might have contributed.
+
+
+
+
+![Screenshot_12-8-2025_125529_public tableau com](https://github.com/user-attachments/assets/4b46a76b-6c32-4506-b4be-7ca9ca0b88ce)
+
+
+Link to View Full Dashboard in Detail :  <a href=" <a href="https://public.tableau.com/app/profile/ayman.mohammad/viz/ESC-50AudioSampleInsightsDashboard/ESC-50AudioSampleInsights" target="_blank">View Entire Dashboard</a>
+" target="_blank">View Entire Dashboard</a>
+
+
 
 ---
 
-## 12.) Challenges Faced 
+## 13.) Challenges Faced 
 After deployment on Modal, some audio files (e.g., bird vs. rain) gave inconsistent results because small differences in preprocessing (normalization/scaling, background noise, etc.) and runtime variability like cold starts changed how the model “saw” the sound.
 
 The system always returns the top 3 label guesses with confidence scores (e.g., Bird: 75%, Wind: 10%, Insect: 15%), so outputs are probabilistic—not simply right or wrong—and similar-sounding clips can produce different mixes of scores.
@@ -309,7 +338,7 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 
 
-## 13.) Next Steps/(Plan)
+## 14.) Next Steps/(Plan)
 
 - Frontend/dashboard integration (UI planned with modern stacks) with deployment to the web
 - Confidence calibration and out-of-distribution detection  
@@ -317,13 +346,13 @@ Small steps fixed things: Instead of big changes, gradual tweaks (like adjusting
 
 ---
 
-## 14.) Tech Stack
+## 15.) Tech Stack
 
 Python, PyTorch (or TensorFlow), FastAPI, Pydantic, Modal (GPU), NVIDIA A10G, Mel Spectrograms, ResNet-style CNN, Mixup, Time/Frequency Masking, AdamW, OneCycleLR, Batch Normalization, TensorBoard, Tableau.
 
 
 
-##  15.) Project Setup
+##  16.) Project Setup
 
 ```bash
 # Clone
