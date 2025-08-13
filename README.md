@@ -35,7 +35,7 @@ In this project, I address these real-world problems by converting audio to mel 
 ### [12.) Dashboard Visualization](#12-dashboard-visualization)
 ### [13.) Challenges Faced](#13-challenges-faced)
 ### [14.) What I Learned](#14-what-i-learned)
-### [15.) Next Steps/(Plan)](#15-next-stepsplan)
+### [15.) Next Steps/Plan](#15-next-stepsplan)
 ### [16.) Tech Stack](#16-tech-stack)
 ### [17.) Project Setup](#17-project-setup)
 
