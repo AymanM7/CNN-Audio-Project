@@ -21,56 +21,23 @@ These challenges have direct implications in critical sectors. In smart city inf
 In this project, I address these real-world problems by converting audio to mel spectrograms, applying robust augmentations (Mixup, SpecAugment), training a ResNet-style CNN, and deploying inference serverlessly on GPUs for scalable, low-latency classification
 
 ## Table of Contents
-<a id="sec-01"></a>
-### 1.) Overview
-
-<a id="sec-02"></a>
-### 2.) Dataset
-
-<a id="sec-03"></a>
-### 3.)  Project Architecture
-
-<a id="sec-04"></a>
-### 4.) Project Properties
-
-<a id="sec-05"></a>
-### 5.) Skills
-
-<a id="sec-06"></a>
-### 6.) Results From Training the Convolutional Nueral Network
-
-<a id="sec-07"></a>
-### 7.) CNN Training Process
-
-<a id="sec-08"></a>
-### 8.) Running Inference with Modal
-
-<a id="sec-09"></a>
-### 9.)  Modal Deployment & Inference Status
-
-<a id="sec-10"></a>
-### 10.)  Active Application Status
-
-<a id="sec-11"></a>
-### 11.) Results Table
-
-<a id="sec-12"></a>
-### 12.) Dashboard Visulization
-
-<a id="sec-13"></a>
-### 13.) Challenges Faced
-
-<a id="sec-14"></a>
-### 14.) What I Learned
-
-<a id="sec-15"></a>
-### 15.) Next Steps/(Plan)
-
-<a id="sec-16"></a>
-### 16.) Tech Stack
-
-<a id="sec-17"></a>
-### 17.) Project Setup
+### [1.) Overview](#sec-01)
+### [2.) Dataset](#sec-02)
+### [3.) Project Architecture](#sec-03)
+### [4.) Project Properties](#sec-04)
+### [5.) Skills](#sec-05)
+### [6.) Results From Training the Convolutional Nueral Network](#sec-06)
+### [7.) CNN Training Process](#sec-07)
+### [8.) Running Inference with Modal](#sec-08)
+### [9.) Modal Deployment & Inference Status](#sec-09)
+### [10.) Active Application Status](#sec-10)
+### [11.) Results Table](#sec-11)
+### [12.) Dashboard Visulization](#sec-12)
+### [13.) Challenges Faced](#sec-13)
+### [14.) What I Learned](#sec-14)
+### [15.) Next Steps/(Plan)](#sec-15)
+### [16.) Tech Stack](#sec-16)
+### [17.) Project Setup](#sec-17)
 
 
 ### 1.) Overview
