@@ -54,7 +54,7 @@ Trains a ResNet-18 CNN
 
 Serves predictions through a FastAPI endpoint with GPU acceleration
 
-Monitoring and interpretabilit and anlysis of specific .wav files  are handled via TensorBoard and Tableau dashboards.
+Monitoring  and analysis of specific .wav files  are handled via TensorBoard and Tableau dashboards.
 
 
 ### 2.) Dataset
@@ -326,7 +326,7 @@ Fixing this meant tightening consistency between training and inference, adding 
 
 Different sounds behaved differently: Even if two clips looked similar, some caused errors—showing that real-world audio varies a lot and can confuse the system.
 
-Added toughness to the model: To handle messy or unusual sounds better, we introduced techniques that make the model more resilient to variability.
+Added toughness to the model: To handle messy or unusual sounds better, I introduced techniques that make the model more resilient to variability.
 
 Early training failed: The first few full training attempts gave poor accuracy because the learning settings weren’t tuned right.
 
