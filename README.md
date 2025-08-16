@@ -2,7 +2,7 @@
 
 ## Executive Summary
 This project is an end-to-end deep learning audio classification system, I built for the ESC-50 environmental sound dataset applying CNNs(Nueral Networks).
-It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Modal.
+It transforms raw audio into mel spectrogram images, trains a ResNet-style CNN for robust feature extraction, and deploys the inference pipeline serverlessly on NVIDIA A10G GPUs via Cloud Infastructure through Modal.
 
 
 ## Problem Statement
