@@ -27,6 +27,11 @@ In this project, I address these real-world problems by converting audio to mel 
 https://medium.com/@ayman.mohammad2025/deep-learning-project-for-audio-classification-1e82f9960c1d
 
 
+
+## Link to Project Research Paper
+
+https://docs.google.com/document/d/1lv8wjGg5hXfCZHcpdzoE6MQmTAoJ5qmH22NdF1eJl-Q/edit?tab=t.0
+
 ## Table of Contents
 - [1.) Overview](#1-overview)
 - [2.) Dataset](#2-dataset)
